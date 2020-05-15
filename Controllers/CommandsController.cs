@@ -1,17 +1,17 @@
 using System.Collections.Generic;
-using Commander.Data;
-using Commander.Models;
+using CommandsRepo.Data;
+using CommandsRepo.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Commander.Controllers
+namespace CommandsRepo.Controllers
 {
     [Route("api/commands")]
     [ApiController]
     public class CommandsController : ControllerBase
     {
-        private readonly ICommanderRepo _repository;
+        private readonly ICommandsRepo _repository;
         
-        public CommandsController(ICommanderRepo repository) {
+        public CommandsController(ICommandsRepo repository) {
             _repository = repository;
         }
 

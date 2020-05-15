@@ -1,7 +1,7 @@
-using Commander.Models;
+using CommandsRepo.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace Commander.Data
+namespace CommandsRepo.Data
 {
     public class CommanderContext : DbContext
     {

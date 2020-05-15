@@ -1,9 +1,9 @@
 using System.Collections.Generic;
-using Commander.Models;
+using CommandsRepo.Models;
 
-namespace Commander.Data
+namespace CommandsRepo.Data
 {
-    public interface ICommanderRepo
+    public interface ICommandsRepo
     {
         IEnumerable<Command> GetAllCommands();
         Command GetCommandById(int id);

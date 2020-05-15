@@ -1,9 +1,9 @@
 using System.Collections.Generic;
-using Commander.Models;
+using CommandsRepo.Models;
 
-namespace Commander.Data
+namespace CommandsRepo.Data
 {    
-    public class MockCommanderRepo : ICommanderRepo
+    public class MockCommanderRepo : ICommandsRepo
     {
         public IEnumerable<Command> GetAllCommands() => new List<Command> {
                 new Command { Id = 1, HowTo = "install packges on linux", Line = "some explanation", Platform = "Linux" },

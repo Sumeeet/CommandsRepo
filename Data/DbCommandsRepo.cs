@@ -1,16 +1,16 @@
 using System.Collections.Generic;
 using System.Linq;
-using Commander.Models;
+using CommandsRepo.Models;
 
-namespace Commander.Data
+namespace CommandsRepo.Data
 {
-    public class SqlCommanderRepo : ICommanderRepo
+    public class DbCommanderRepo : ICommandsRepo
     {
         private CommanderContext _context;
 
-        public SqlCommanderRepo(CommanderContext context)
+        public DbCommanderRepo(CommanderContext context)
         {
-            _context = context;            
+            _context = context;
         }
 
         public IEnumerable<Command> GetAllCommands()

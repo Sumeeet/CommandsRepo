@@ -11,9 +11,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Commander.Data;
+using CommandsRepo.Data;
 
-namespace Commander
+namespace CommandsRepo
 {
     public class Startup
     {
@@ -31,7 +31,7 @@ namespace Commander
 
             services.AddControllers();
 
-            services.AddScoped<ICommanderRepo, MockCommanderRepo>();
+            services.AddScoped<ICommandsRepo, MockCommanderRepo>();
             //services.AddScoped<ICommanderRepo, SqlCommanderRepo>();
         }
 
