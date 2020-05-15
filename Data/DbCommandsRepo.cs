@@ -6,9 +6,9 @@ namespace CommandsRepo.Data
 {
     public class DbCommanderRepo : ICommandsRepo
     {
-        private CommanderContext _context;
+        private CommandsContext _context;
 
-        public DbCommanderRepo(CommanderContext context)
+        public DbCommanderRepo(CommandsContext context)
         {
             _context = context;
         }

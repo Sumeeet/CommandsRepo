@@ -27,12 +27,12 @@ namespace CommandsRepo
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddDbContext<CommanderContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("CommanderConnection")));
+            services.AddDbContext<CommandsContext>(opt => opt.UseNpgsql(Configuration.GetConnectionString("CommandsConnection")));
 
             services.AddControllers();
 
-            services.AddScoped<ICommandsRepo, MockCommanderRepo>();
-            //services.AddScoped<ICommanderRepo, SqlCommanderRepo>();
+           // services.AddScoped<ICommandsRepo, MockCommanderRepo>();
+            services.AddScoped<ICommandsRepo, DbCommanderRepo>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
